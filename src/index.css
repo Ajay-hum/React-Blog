@@ -1,0 +1,313 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black; /* Set the background to black */
+  color: white; /* Optional: set text color to white for visibility */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #111;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;  /* Ensure links are aligned horizontally */
+  gap: 20px; /* Space between links */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-size: 1rem;
+  margin-right: 20px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #ffc107;
+  color: #111 !important;
+}
+
+/* Button Styling */
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  color: #111;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column; /* Make links stack vertically on smaller screens */
+    gap: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    margin-right: 0;
+  }
+}
+
+/* Hero Section with Background Image and Centered Content */
+.hero-section {
+  background-image: url("C:\Users\justu\Downloads\image_use.jpg"); /* Update to the correct relative path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Center-align text */
+  width: 100%; /* Full width */
+  margin: 0;
+  padding: 0;
+  position: relative; /* Ensure proper positioning for the overlay */
+  overflow: hidden; /* Avoid content overflow */
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+}
+
+.hero-section .container {
+  z-index: 1; /* Bring container above the background and overlay */
+  max-width: 800px; /* Limit container width */
+  margin: 0 auto; /* Center the container */
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-section p.lead {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.hero-section .btn-warning {
+  background-color: #ffc107;
+  border: none;
+  color: #111;
+}
+
+.hero-section .btn-outline-light {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.hero-section .btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #111;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p.lead {
+    font-size: 1.2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/* Blog Card Styling */
+.blog-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #6c757d;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #ffc107;
+  border-color: black;
+}
+
+/* Latest Posts Section */
+.list-group-item {
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+.list-group-item img{
+  border: rounded;
+}
+
+.list-group-item h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.list-group-item p {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Responsive Layout for Blog Cards */
+@media (max-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+/* Pagination Styles */
+.pagination {
+  justify-content: center;
+}
+
+.page-link {
+  color: #fff;
+  background-color: #343a40;
+  border: none;
+}
+
+.page-item.active .page-link {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.page-link:hover {
+  background-color: #495057;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Contact Styles */
+.contact-container {
+  padding: 50px;
+}
+
+.contact-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  max-width: 100%; /* Ensure image fits well */
+  height: auto;
+}
+
+.contact-form {
+  padding: 30px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form .form-control {
+  height: 45px;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #6f42c1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #563d7c;
+}
+
+/* LoginForm Styles */
+.contents {
+  min-height: 100vh;
+  background-color: #d6d5d3;
+}
+
+.invalid-feedback {
+  display: block;
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.btn-primary {
+  margin-top: 1rem;
+  background-color: #007bff;
+  border-color: #007bff;
+}
