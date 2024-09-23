@@ -15,6 +15,8 @@ code {
 /* Navbar Styles */
 .navbar {
   background-color: #111;
+  position: relative;
+  z-index: 100; /* Higher z-index to make sure it's above the hero section */
 }
 
 .navbar-brand img {
@@ -66,20 +68,31 @@ code {
 
 /* Hero Section with Background Image and Centered Content */
 .hero-section {
-  background-image: url("C:\Users\justu\Downloads\image_use.jpg"); /* Update to the correct relative path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh; /* Full viewport height */
+  margin: auto;
+  /* position: relative; */
+  /* width: 100%; */
+  height: 85vh; /* Full viewport height */
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  text-align: center; /* Center-align text */
-  width: 100%; /* Full width */
-  margin: 0;
-  padding: 0;
-  position: relative; /* Ensure proper positioning for the overlay */
-  overflow: hidden; /* Avoid content overflow */
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Ensure content inside stays below the navbar */
+  /* overflow: hidden; */
+}
+
+.hero-section .image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Push the image behind the content */
+}
+
+.hero-section .hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the whole area like a background image */
 }
 
 .hero-section::before {
@@ -89,31 +102,34 @@ code {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+  z-index: 0;
 }
 
 .hero-section .container {
-  z-index: 1; /* Bring container above the background and overlay */
-  max-width: 800px; /* Limit container width */
-  margin: 0 auto; /* Center the container */
+  z-index: 1; /* Ensures content appears above the image and overlay */
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero-section h1 {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #fff;
+  color: black;
 }
 
 .hero-section p.lead {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
-  color: #fff;
+  font-weight: 400;
+  color: black;
 }
 
 .hero-section p {
-  font-size: 1.2rem;
-  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 350;
+  color: black;
 }
 
 .hero-section .btn-warning {
@@ -123,8 +139,8 @@ code {
 }
 
 .hero-section .btn-outline-light {
-  border-color: #ffffff;
-  color: #ffffff;
+  border-color: black;
+  color: black;
 }
 
 .hero-section .btn-outline-light:hover {
@@ -146,7 +162,6 @@ code {
     font-size: 1rem;
   }
 }
-
 
 
 

@@ -1,32 +1,26 @@
-import React, { useState } from 'react';
-
-import image1 from '../assets/BlogsImage/Paris Fashion week.jpg';
-import image2 from '../assets/BlogsImage/man in suit.png';
-
-const blogPosts = [
-  {
-    id: 1,
-    title: 'Top Trends from Paris Fashion Week 2024',
-    excerpt: 'Discover the standout trends from the latest Paris Fashion Week and how they are shaping the fashion industry for 2024.',
-    image: image1,
-    author: "Ben Jackson",
-    date: "9/12/2024",
-  },
-  {
-    id: 2,
-    title: 'Seasonal Outfits',
-    excerpt: 'What to wear this season...',
-    image: image2,
-    author: "Hilda Maxwell",
-    date: "11/12/2024",
-  },
-  // Add more blog posts here
-];
+import React, { useState, useEffect } from 'react';
 
 const Blogs = () => {
+  const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 2;
-  const totalPosts = blogPosts.length;
+  const postsPerPage = 6;
+
+  // Fetch the data from api.json
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('../api.json'); // Adjust path if necessary
+        const data = await response.json();
+        setBlogs(data.blogs);
+      } catch (error) {
+        console.error('Error fetching blog data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const totalPosts = blogs.length;
   const totalPages = Math.ceil(totalPosts / postsPerPage);
 
   const handlePageChange = (pageNumber) => {
@@ -35,22 +29,24 @@ const Blogs = () => {
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = blogPosts.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPosts = blogs.slice(indexOfFirstPost, indexOfLastPost);
 
   // Latest Posts logic
-  const latestPosts = blogPosts.slice(0, 3); // Displaying the latest 3 posts
+  const latestPosts = blogs.slice(0, 3); // Display the latest 3 posts
 
-  // BlogPost component code, now within Blogs.js
+  // BlogPost component code
   const BlogPost = ({ post }) => (
     <div className="col-md-6 d-flex mb-4">
       <div className="card blog-card h-100 w-100">
         <img src={post.image} className="card-img-top" alt={post.title} />
         <div className="card-body">
           <h5 className="card-title">{post.title}</h5>
-          <p className="card-text">{post.excerpt}</p>
+          <p className="card-text">{post.content.slice(0, 100)}...</p>
           <p className="blog-card-author">
-            Posted by <strong>{post.author}</strong> on {post.date}
+            Posted by <strong>{post.author}</strong> on {post.published_date} | {post.reading_time}
           </p>
+          <p><strong>Category:</strong> {post.category}</p>
+          <p><strong>Tags:</strong> {post.tags.join(', ')}</p>
           <button className="btn btn-warning">Read More</button>
         </div>
       </div>
@@ -90,7 +86,7 @@ const Blogs = () => {
               <li key={post.id} className="list-group-item">
                 <img src={post.image} className="card-img-top" alt={post.title} />
                 <h6>{post.title}</h6>
-                <p>{post.excerpt.slice(0, 50)}...</p>
+                <p>{post.excerpt ? post.excerpt.slice(0, 50) : post.content.slice(0, 50)}...</p>
               </li>
             ))}
           </ul>
