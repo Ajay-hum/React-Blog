@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 6;
+  const postsPerPage = 4;
 
   // Fetch the data from api.json
   useEffect(() => {
@@ -41,17 +41,23 @@ const Blogs = () => {
         <img src={post.image} className="card-img-top" alt={post.title} />
         <div className="card-body">
           <h5 className="card-title">{post.title}</h5>
-          <p className="card-text">{post.content.slice(0, 100)}...</p>
-          <p className="blog-card-author">
-            Posted by <strong>{post.author}</strong> on {post.published_date} | {post.reading_time}
+          {/* Fallback for content */}
+          <p className="card-text">
+            {post.content ? post.content.slice(0, 100) : post.excerpt.slice(0, 100)}...
           </p>
-          <p><strong>Category:</strong> {post.category}</p>
+          <p className="blog-card-author d-flex align-items-center">
+            <strong>Author:</strong> <img src={post.author_Picture} className="rounded-circle mx-1 author-image" alt='author'/><strong>{post.author}</strong>
+          </p>
+          <p><strong>Published Date:</strong> {post.published_date}</p>
+          <p><strong>Reading Time:</strong> {post.reading_time}</p>
+          {/* <p><strong>Category:</strong> {post.category}</p> */}
           <p><strong>Tags:</strong> {post.tags.join(', ')}</p>
           <button className="btn btn-warning">Read More</button>
         </div>
       </div>
     </div>
   );
+  
 
   return (
     <div className="container my-5">

@@ -1,0 +1,136 @@
+{
+    "blogs": [
+        {
+            "id": 1,
+            "image": "/assets/Tools/spring-fashion.jpg",
+            "category": "Fashion",
+            "author": "Emily Clark",
+            "author_Picture": "https://example.com/images/emily.jpg",
+            "published_date": "2023-03-20",
+            "reading_time": "6 min",
+            "content": "Stay ahead of the trends this spring with our fashion guide, highlighting the must-have pieces and colors of the season. Discover how to style them effortlessly to make a statement.",
+            "tags": ["Fashion", "Trends", "Spring"]
+        },
+        {
+            "id": 2,
+            "image": "https://example.com/images/accessories.jpg",
+            "category": "Fashion",
+            "author": "Michael Brown",
+            "author_Picture": "https://example.com/images/michael.jpg",
+            "published_date": "2023-04-10",
+            "reading_time": "4 min",
+            "content": "Accessorize your outfits with the best picks of 2023, including jewelry, bags, and shoes. Learn how to elevate your look with the right accessories that reflect your personal style.",
+            "tags": ["Accessories", "Fashion"]
+        },
+        {
+            "id": 3,
+            "image": "https://example.com/images/summer-fashion.jpg",
+            "category": "Fashion",
+            "author": "Alice Johnson",
+            "author_Picture": "https://example.com/images/alice.jpg",
+            "published_date": "2023-05-15",
+            "reading_time": "5 min",
+            "content": "Top summer fashion essentials you need to beat the heat while looking stylish. From lightweight fabrics to vibrant prints, we cover everything to keep you cool and trendy.",
+            "tags": ["Summer", "Fashion"]
+        },
+        {
+            "id": 4,
+            "image": "https://example.com/images/winter-fashion.jpg",
+            "category": "Fashion",
+            "author": "John Doe",
+            "author_Picture": "https://example.com/images/john.jpg",
+            "published_date": "2023-06-01",
+            "reading_time": "6 min",
+            "content": "Stay warm and stylish this winter with our guide to layering, cozy fabrics, and trendy outerwear. Discover how to make a statement even in cold weather while staying comfortable.",
+            "tags": ["Winter", "Fashion"]
+        },
+        {
+            "id": 5,
+            "image": "https://example.com/images/fashion-week.jpg",
+            "category": "Fashion",
+            "author": "Jane Smith",
+            "author_Picture": "https://example.com/images/jane.jpg",
+            "published_date": "2023-07-10",
+            "reading_time": "7 min",
+            "content": "Highlights from the latest fashion week, showcasing innovative designs and emerging trends. Get inspired by the creativity of top designers and their collections that set the tone for the season.",
+            "tags": ["Fashion Week", "Trends"]
+        },
+        {
+            "id": 6,
+            "image": "https://example.com/images/eco-fashion.jpg",
+            "category": "Fashion",
+            "author": "Laura Green",
+            "author_Picture": "https://example.com/images/laura.jpg",
+            "published_date": "2023-08-05",
+            "reading_time": "5 min",
+            "content": "The rise of eco-friendly fashion is changing the industry. Discover sustainable brands and tips for building a conscious wardrobe that looks good and feels good while being kind to the planet.",
+            "tags": ["Eco-Friendly", "Fashion"]
+        },
+        {
+            "id": 7,
+            "image": "https://example.com/images/street-style.jpg",
+            "category": "Fashion",
+            "author": "David Wilson",
+            "author_Picture": "https://example.com/images/david.jpg",
+            "published_date": "2023-08-20",
+            "reading_time": "4 min",
+            "content": "Exploring street style trends from around the world, showcasing how everyday people express their individuality through fashion. Get inspired by real-life looks that break traditional fashion rules.",
+            "tags": ["Street Style", "Fashion"]
+        },
+        {
+            "id": 8,
+            "image": "https://example.com/images/fashion-tips.jpg",
+            "category": "Fashion",
+            "author": "Michael Brown",
+            "author_Picture": "https://example.com/images/michael.jpg",
+            "published_date": "2023-09-01",
+            "reading_time": "6 min",
+            "content": "Essential fashion tips for every wardrobe, including how to mix and match pieces, accessorize, and find your personal style. Elevate your fashion game effortlessly with these simple guidelines.",
+            "tags": ["Fashion Tips", "Style"]
+        },
+        {
+            "id": 9,
+            "image": "https://example.com/images/vintage-fashion.jpg",
+            "category": "Fashion",
+            "author": "Alice Johnson",
+            "author_Picture": "https://example.com/images/alice.jpg",
+            "published_date": "2023-09-10",
+            "reading_time": "5 min",
+            "content": "The charm of vintage fashion is timeless. Learn how to incorporate vintage pieces into your modern wardrobe for a unique and stylish look that stands out from the crowd.",
+            "tags": ["Vintage", "Fashion"]
+        },
+        {
+            "id": 10,
+            "image": "/assets/Tools/andrew-davie-GTvSYaxBSEw-unsplash.jpg",
+            "category": "Fashion",
+            "author": "Chris Martin",
+            "author_Picture": "https://example.com/images/chris.jpg",
+            "published_date": "2023-09-15",
+            "reading_time": "5 min",
+            "content": "Men's fashion trends for 2023 focus on comfort and style. Discover the latest looks that combine functionality with flair, perfect for any occasion, from casual outings to formal events.",
+            "tags": ["Men's Fashion", "Trends"]
+        },
+        {
+            "id": 11,
+            "title": "Top Trends from Paris Fashion Week 2024",
+            "excerpt": "Discover the standout trends from the latest Paris Fashion Week and how they are shaping the fashion industry for 2024.",
+            "image": "/assets/Tools/armen-aydinyan-bhJfx7t4QUA-unsplash.jpg",
+            "author": "Ben Jackson",
+            "author_Picture": "https://example.com/images/chris.jpg",
+            "published_date": "2024-12-09",
+            "reading_time": "5 min",
+            "tags": ["Fashion", "Trends"]
+        },
+        {
+            "id": 12,
+            "title": "Seasonal Outfits",
+            "excerpt": "What to wear this season...",
+            "image": "image2",
+            "author": "Hilda Maxwell",
+            "author_Picture": "https://example.com/images/chris.jpg",
+            "published_date": "2024-11-12",
+            "reading_time": "5 min",
+            "tags": ["Fashion", "Trends"]
+        }
+    ]
+}

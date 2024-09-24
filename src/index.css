@@ -217,6 +217,14 @@ code {
   color: #6c757d;
 }
 
+/*Author Image style*/
+.author-image {
+  width: 30px; /* Set the desired size */
+  height: 30px; /* Ensures the image is square */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+}
+
+
 /* Responsive Layout for Blog Cards */
 @media (max-width: 768px) {
   .col-md-6 {

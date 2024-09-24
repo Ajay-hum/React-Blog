@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import image from '../assets/Tools/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg'; // Correct image path
+import image from '../assets/HomeImage/arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg'; // Correct image path
 import Blogs from './Blogs';
 
 const Home = () => (
@@ -22,7 +22,7 @@ const Home = () => (
       </div>
     </div>
     {/* Add Blogs Component Here */}
-    <Blogs />
+    <Blogs style={{marginTop: "2.5rem"}}/>
   </div>
 );
 
